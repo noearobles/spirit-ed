@@ -1,0 +1,126 @@
+.app__newsletter-drinks {
+    padding: 2rem 4rem;
+    background: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.app__newsletter-heading {
+    text-align: center;
+}
+
+.app__newsletter-drinks h2 {
+    font-size: 28px;
+}
+
+.app__newsletter-input-drinks form {
+    display: flex;
+    flex-direction: row;
+}
+
+.app__newsletter-input-drinks input {
+    width: 620px;
+    border: 1px solid var(--color-golden);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: var(--font-base);
+    color: var(--color-white);
+    padding: 0.75rem 1rem;
+    background: var(--color-black);
+}
+
+.app__newsletter-input-drinks button {
+    color: var(--color-white);
+    background: var(--color-black);
+    border: 1px solid var(--color-golden);
+}
+
+.btn-drinks:hover {
+    color: var(--color-golden);
+}
+
+
+
+.search-item-drinks {
+    color: var(--color-golden);
+    margin-bottom: 2rem;
+    width: 3rem;
+    height: 1rem;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: .20rem;
+}
+
+.history {
+    padding-left: 20px;
+    display: inline;
+    vertical-align: middle;
+}
+
+
+span {
+    color: var(--color-white);
+    padding-right: 5px;
+}
+
+.clr {
+    cursor: pointer;
+    padding-inline: 0.5em;
+    border-radius: 5px 5px;
+    outline: none;
+    background-color: var(--color-black);
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.search-box-active-drinks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 2000px) {
+    .app__newsletter-input-drinks input {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .app__newsletter-input-drinks {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .app__newsletter-input-drinks button {
+
+        cursor: pointer;
+
+        padding-inline: 0.5em;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .app__newsletter-input-drinks input {
+
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__newsletter {
+        padding: 2rem 0;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .app__newsletter-heading h1 {
+        font-size: 32px;
+        line-height: 50px;
+    }
+}

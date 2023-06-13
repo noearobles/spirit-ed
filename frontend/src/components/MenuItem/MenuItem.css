@@ -1,0 +1,92 @@
+.app__menuitem {
+    /* width: 100%;
+    margin: 1rem 0;
+
+    display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 5fr));
+    grid-gap: 1.5em;
+}
+
+.card {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url('../../assets/blueShaker.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.app__menuitem-head {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+}
+
+.app__menuitem-sub {
+    /* width: 100%;
+    margin-top: 0.2rem;
+     */
+    padding: 0.5em 1em;
+    background-color: var(--color-black);
+    text-align: center;
+}
+
+
+.app__menuitem-dash {
+    align-self: center;
+    height: 1px;
+    background: var(--color-golden);
+
+}
+
+.app__menuitem-price {
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; */
+    text-align: center;
+    background-color: var(--color-black);
+    padding: .5em 1em;
+    border-radius: 10px;
+}
+
+.app__menuitem-name {
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+.app__menuitem-name p {
+    align-self: center;
+}
+
+.instructions-container {
+    width: 75%;
+    align-self: center;
+}
+
+.instructions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+.instructions ul {
+    list-style: none;
+}
+
+@media screen and (max-width: 850px) {
+    .instructions-container {
+        width: 100%;
+    }
+}
