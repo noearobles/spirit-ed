@@ -76,9 +76,10 @@
         display: none;
     }
 
+    /* 
     .app__aboutus-overlay img {
         display: block;
-    }
+    } */
 
     .app__aboutus-content_about p,
     .app__aboutus-content_history p {
