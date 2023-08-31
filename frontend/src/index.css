@@ -17,6 +17,10 @@
   width: 100%;
 }
 
+html {
+  background: url('./assets/bg.png');
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
