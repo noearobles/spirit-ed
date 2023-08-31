@@ -33,15 +33,18 @@ const HistoryGallery = () => {
             >
               {section.subsections.map((subsection, subIndex) => (
                 <div key={`subsection-${index}-${subIndex}`}>
-                  <div
-                    className="app__aboutus-wine app__bg flex__center section__padding"
-                    id="about"
-                  >
-                    <div className="flex__center">
+                  <div className="app__aboutus-wine app__bg  section__padding">
+                    <div className="flex__center" id="about">
                       <div className="app__aboutus-content_about-wine">
                         <div>
                           {" "}
-                          <p className="p__cormorant">{section.title}</p>
+                          <p className="p__cormorant">{section.title}</p>{" "}
+                          <h1
+                            className="headtext__cormorant-history"
+                            style={{ paddingLeft: "1em" }}
+                          >
+                            {subsection.title}
+                          </h1>
                           <div
                             className="app__menuitem-dash"
                             style={{ marginBottom: "1rem", width: "100%" }}
@@ -60,12 +63,6 @@ const HistoryGallery = () => {
 
                       <div className="app__aboutus-content_history-wine">
                         {" "}
-                        <h1
-                          className="headtext__cormorant-history"
-                          style={{ paddingLeft: "1em" }}
-                        >
-                          {subsection.title}
-                        </h1>
                         <CustomImage wd={"80%"} imgSrc={section.image} />
                         {/* <div className="app__wrapper_img-wine">
                           <img src={section.image} alt="header_img" />

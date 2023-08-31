@@ -9,6 +9,7 @@ import { images } from "../Home/constants";
 import "../Wine/Wine.css";
 import { Link, useLocation } from "react-router-dom";
 import { wineGuideData } from "./WineData";
+import CustomImage from "../Home/CustomImage";
 const WineGuide = () => {
   const scrollRef = React.useRef(null);
   const location = useLocation();
@@ -73,8 +74,12 @@ const WineGuide = () => {
                       </div>
 
                       <div className="app__aboutus-content_history-wine">
-                        <div className="app__wrapper_img-wine">
-                          <img src={images.vodka} alt="header_img" />
+                        <div className="app__aboutus-content_history-wine">
+                          {" "}
+                          <CustomImage wd={"80%"} imgSrc={section.image} />
+                          {/* <div className="app__wrapper_img-wine">
+                          <img src={section.image} alt="header_img" />
+                        </div> */}
                         </div>
                       </div>
                     </div>

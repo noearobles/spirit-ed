@@ -281,6 +281,10 @@
         padding: 4rem 0 4rem 4rem;
     }
 
+    #about {
+        display: block;
+    }
+
     .app__gallery-images-history {
         max-width: 100%;
         margin: 0;

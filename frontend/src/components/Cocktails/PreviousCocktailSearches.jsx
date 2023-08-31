@@ -139,7 +139,7 @@ export default function PreviousCocktailSearches(props) {
 
               <div className="app__menuitem-price">
                 <p className="p__cormorant">
-                  <Link to={`/cocktails/${item.idDrink}`} className="view-btn">
+                  <Link to={`/cocktails/${item.strDrink}`} className="view-btn">
                     View {`${item.strDrink}`} Recipe
                   </Link>
                 </p>
