@@ -63,7 +63,11 @@ const HistoryGallery = () => {
 
                       <div className="app__aboutus-content_history-wine">
                         {" "}
-                        <CustomImage wd={"80%"} imgSrc={section.image} />
+                        <CustomImage
+                          wd={"80%"}
+                          pt={"20px"}
+                          imgSrc={section.image}
+                        />
                         {/* <div className="app__wrapper_img-wine">
                           <img src={section.image} alt="header_img" />
                         </div> */}
