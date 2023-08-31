@@ -1,9 +1,5 @@
 .app__header {
-    background: url('../../assets/bg.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: fixed;
+    background-color: var(--color-black);
 }
 
 .app__header-h1 {
