@@ -1,11 +1,11 @@
 .app__aboutus {
     position: relative;
+    background: var(--color-black);
 }
 
 .app__aboutus-overlay {
     position: absolute;
     inset: 0;
-    background: var(--color-black);
 }
 
 .app__aboutus-overlay img {
