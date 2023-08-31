@@ -7,7 +7,7 @@ export default function Card(props) {
   const { data, isLoading, isError } = props;
 
   return (
-    <div id="ckCard" className="app__menuitem">
+    <div className="app__menuitem">
       {isLoading ? (
         <div className="loader">
           {" "}

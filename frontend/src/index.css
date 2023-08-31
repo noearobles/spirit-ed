@@ -15,10 +15,11 @@
 
 #root {
   width: 100%;
+  background-color: var(--color-black);
 }
 
 html {
-  background: url('./assets/bg.png');
+  background-color: var(--color-black);
 }
 
 * {

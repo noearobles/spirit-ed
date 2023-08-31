@@ -7,11 +7,6 @@
     grid-gap: 1.5em;
 }
 
-#ckCard {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 2fr));
-    grid-gap: 1.5em;
-}
 
 .card {
     width: 100%;
