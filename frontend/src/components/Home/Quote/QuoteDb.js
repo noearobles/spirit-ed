@@ -3,7 +3,7 @@ import Ben from '../../../assets/author/BF.jpg';
 import Cummings from '../../../assets/author/Cummings.webp';
 import Stephen from '../../../assets/author/StephenK.webp';
 import Frank from '../../../assets/author/Frank.jpg';
-import Scott from '../../../assets/author/FScott.jpg';
+import Scott from '../../../assets/author/FSCott.jpg';
 import Chester from '../../../assets/author/GK.jpg';
 
 
