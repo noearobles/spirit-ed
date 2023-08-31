@@ -18,7 +18,9 @@ export const FetchSingleCocktail = (id) => {
   return useQuery(["cocktail", id], () => fetchCocktail(id));
 };
 const namedCocktail = async (name) => {
-  const { data } = await axios.get(`${getAllCocktailsURL`${name}`}`);
+  const { data } = await axios.get(
+    `https://www.thecocktaildb.com/api/json/v2/${MY_KEY}/search.php?s=${name}`
+  );
   return data;
 };
 export const FetchNamedCocktail = (name) => {

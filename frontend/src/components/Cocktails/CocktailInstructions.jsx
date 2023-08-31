@@ -53,7 +53,7 @@ export default function CocktailInstructions(props) {
   return (
     <div className="app__menuitem card">
       <div className="app__menuitem-name-cK">
-        <CustomImage imgSrc={item.strDrinkThumb} pt="50%" />
+        <CustomImage imgSrc={item.strDrinkThumb} wd="50%" />
         <p className="p__cormorant" style={{ color: "#DCCA87" }}>
           {item.strDrink}
         </p>
@@ -66,24 +66,28 @@ export default function CocktailInstructions(props) {
             <label>Measurement Unit:</label>
             <div>
               <button
+                id="measure"
                 onClick={() => setUnit("oz")}
                 className={unit === "oz" ? "active" : ""}
               >
                 oz
               </button>
               <button
+                id="measure"
                 onClick={() => setUnit("ml")}
                 className={unit === "ml" ? "active" : ""}
               >
                 ml
               </button>
               <button
+                id="measure"
                 onClick={() => setUnit("cl")}
                 className={unit === "cl" ? "active" : ""}
               >
                 cl
               </button>
               <button
+                id="measure"
                 onClick={() => setUnit("cups")}
                 className={unit === "cups" ? "active" : ""}
               >
@@ -91,29 +95,30 @@ export default function CocktailInstructions(props) {
               </button>
             </div>
           </div>
-
-          <ul>
-            <h2>Measures</h2>
-            {convertedMeasures.map((measure, index) => {
-              return (
-                <li key={index}>
-                  {measure} {unit}
-                </li>
-              );
-            })}
-          </ul>
-          <ul>
-            <h2>Ingredients</h2>
-            {ingredients.map((ingredient, index) => {
-              return (
-                <li key={index}>
-                  <Link to={`/ingredients/${ingredient}`} className="ing-btn">
-                    {ingredient}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <div>
+            <ul>
+              <h2>Measures</h2>
+              {convertedMeasures.map((measure, index) => {
+                return (
+                  <li key={index}>
+                    {measure} {unit}
+                  </li>
+                );
+              })}
+            </ul>
+            <ul>
+              <h2>Ingredients</h2>
+              {ingredients.map((ingredient, index) => {
+                return (
+                  <li key={index}>
+                    <Link to={`/ingredients/${ingredient}`} className="ing-btn">
+                      {ingredient}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
         <p className="p__cormorant">How to Make: {item.strInstructions}</p>
       </div>

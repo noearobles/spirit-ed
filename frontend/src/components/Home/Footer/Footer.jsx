@@ -27,14 +27,14 @@ const Footer = () => (
 
       <div className="app__footer-links_logo">
         <h1 className="app__nav-h1">Spirit-Ed</h1>{" "}
-        <p className="p__opensans">
+        {/* <p className="p__opensans">
           &quot;The whole world is about three drinks behind.&quot;
         </p>
         <div className="app__footer-links_icons">
           <FiFacebook />
           <FiTwitter />
           <FiInstagram />
-        </div>
+        </div> */}
       </div>
 
       <div className="app__footer-links_work">

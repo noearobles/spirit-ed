@@ -1,6 +1,10 @@
 .app__specialMenu {
     flex-direction: column;
-    background: var(--color-black);
+    background: url('../../../assets/bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 .app__specialMenu-title {

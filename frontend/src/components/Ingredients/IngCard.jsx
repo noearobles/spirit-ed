@@ -8,7 +8,7 @@ export default function IngCard(props) {
 
   return (
     <>
-      <div className="app__menuitem">
+      <div id="ckCard" className="app__menuitem">
         {isLoading ? (
           <div className="loader">
             {" "}

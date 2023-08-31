@@ -16,8 +16,6 @@ import AboutUs from "./components/Home/AboutUs/AboutUs";
 import ScrollToTop from "./components/Hooks/ScrollToTop";
 import NamedCocktail from "./components/Cocktails/NamedCocktail";
 import Wine from "./components/Wine/Wine";
-import WineRecognition from "./components/Wine/WineRecognition";
-
 import { useState, useEffect } from "react";
 import { RingLoader } from "react-spinners";
 import Login from "./components/Login/Login";
@@ -29,7 +27,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 4000);
   }, []);
 
   const Layout = () => {
@@ -70,15 +68,15 @@ function App() {
             <Route path="history" element={<History />} />
             <Route path="contact" element={<Newsletter />} />
             <Route path="cocktails" element={<Cocktails />} />
-            <Route path="cocktails/:id" element={<SingleCocktail />} />
+            {/* <Route path="cocktails/:id" element={<SingleCocktail />} /> */}
             <Route path="cocktails/:name" element={<NamedCocktail />} />
             <Route path="/ingredients" element={<Ingredients />} />
             <Route
               path="/ingredients/:ingName"
               element={<IngredientDetails />}
             />
-            {/* <Route path="/wine" element={<Wine />} />
-            <Route path="/beer" element={<Beer />} />
+            <Route path="/wine" element={<Wine />} />
+            {/* <Route path="/beer" element={<Beer />} />
             <Route path="/sake" element={<Sake />} /> */}
             <Route path="login" element={<Login />} />
             <Route path="/register" element={<Register />} />

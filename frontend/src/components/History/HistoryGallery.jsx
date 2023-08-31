@@ -1,15 +1,8 @@
 import React from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import "./History.css";
-import Mead from "./Mead";
-import Wine from "./Wine";
-import Vodka from "./Vodka";
-import Whiskey from "./Whiskey";
-import Tequila from "./Tequila";
-import Gin from "./Gin";
-import Rum from "./Rum";
-import Liqueurs from "./Liqueurs";
-
+import { historyData } from "./HistoryData";
+import CustomImage from "../Home/CustomImage";
 const HistoryGallery = () => {
   const scrollRef = React.useRef(null);
 
@@ -28,46 +21,64 @@ const HistoryGallery = () => {
       });
     }
   };
-  const [galleryItems, setGalleryItems] = React.useState([]);
-
-  React.useEffect(() => {
-    const fetchGalleryItems = async () => {
-      try {
-        setTimeout(() => {
-          const data = [
-            <Mead />,
-            <Wine />,
-            <Vodka />,
-            <Whiskey />,
-            <Tequila />,
-            <Gin />,
-            <Rum />,
-            <Liqueurs />,
-          ];
-          setGalleryItems(data);
-        }, 1000);
-      } catch (error) {
-        console.error("Error fetching gallery items:", error);
-      }
-    };
-
-    fetchGalleryItems();
-  }, []);
 
   return (
     <div className="app__gallery-history flex__center">
       <div className="app__gallery-images-history">
         <div className="app__gallery-images_container-history" ref={scrollRef}>
-          {galleryItems.map((item, index) => (
+          {historyData.sections.map((section, index) => (
             <div
-              className="app__gallery-images_card-history flex__center"
-              key={`gallery_image-${index + 1}`}
+              className="app__gallery-images_card-wine flex__center"
+              key={`section-${index}`}
             >
-              <div>{item}</div>
+              {section.subsections.map((subsection, subIndex) => (
+                <div key={`subsection-${index}-${subIndex}`}>
+                  <div
+                    className="app__aboutus-wine app__bg flex__center section__padding"
+                    id="about"
+                  >
+                    <div className="flex__center">
+                      <div className="app__aboutus-content_about-wine">
+                        <div>
+                          {" "}
+                          <p className="p__cormorant">{section.title}</p>
+                          <div
+                            className="app__menuitem-dash"
+                            style={{ marginBottom: "1rem", width: "100%" }}
+                          />
+                        </div>
+                        <div>
+                          {" "}
+                          <div
+                            className="app__menuitem-dash"
+                            style={{ marginBottom: "1rem", width: "100%" }}
+                          />
+                        </div>
+
+                        <p className="p__opensans">{subsection.content}</p>
+                      </div>
+
+                      <div className="app__aboutus-content_history-wine">
+                        {" "}
+                        <h1
+                          className="headtext__cormorant-history"
+                          style={{ paddingLeft: "1em" }}
+                        >
+                          {subsection.title}
+                        </h1>
+                        <CustomImage wd={"80%"} imgSrc={section.image} />
+                        {/* <div className="app__wrapper_img-wine">
+                          <img src={section.image} alt="header_img" />
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>
-        <div className="app__gallery-images_arrows-history">
+        <div className="app__gallery-images_arrows-wine">
           <BsArrowLeftShort
             className="gallery__arrow-icon-history"
             onClick={() => scroll("left")}

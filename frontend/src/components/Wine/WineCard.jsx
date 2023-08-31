@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import CustomImage from "../Home/CustomImage";
 import "../Cocktails/Cocktail.css";
 
@@ -25,11 +24,6 @@ export default function WineCard(props) {
                 </div>
 
                 <div className="app__menuitem-price">
-                  {/* <p className="p__cormorant">
-                    <Link to={`/cocktails/${item.idDrink}`} className="view-btn">
-                      View {`${item.strDrink}`} Recipe
-                    </Link>
-                  </p> */}
                   <div className="app__menuitem-sub">
                     <p className="p__opensans" style={{ color: "#AAAAAA" }}>
                       <b>Winery:</b> {item.winery}

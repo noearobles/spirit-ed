@@ -147,7 +147,7 @@
 }
 
 .app__gallery-content-history {
-    flex: 1;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -162,7 +162,7 @@
 }
 
 .app__gallery-images-history {
-    flex: 1;
+
     display: flex;
     flex-direction: row;
     overflow: hidden;

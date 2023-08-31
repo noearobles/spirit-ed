@@ -5,7 +5,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "../../api/Axios";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -255,10 +255,7 @@ const Register = () => {
             </form>
           </div>
           <div>
-            <p
-              className="p__cormorant"
-              style={{ color: "#DCCA87", marginTop: "2rem" }}
-            >
+            <p className="p__cormorant" style={{ color: "#DCCA87" }}>
               <Link to={"/login"}> Already registered?</Link>
 
               <br />

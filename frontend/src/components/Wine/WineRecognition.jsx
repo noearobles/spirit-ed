@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-// import { recognizeWine } from "../../api/cocktailDb";
 import "./Wine.css";
 import axios from "axios";
+import wine from "../../assets/wine.mp4";
 const WineRecognition = () => {
   const [results, setResults] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
-
+  const [loading, setLoading] = useState(false);
+  const vidRef = React.useRef();
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     setSelectedFile(file);
@@ -38,10 +39,13 @@ const WineRecognition = () => {
     };
 
     try {
+      setLoading(true);
       const response = await axios.request(options);
       setResults(response.data.results);
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -52,7 +56,6 @@ const WineRecognition = () => {
     >
       <div className="app__newsletter-heading">
         <h1 className="headtext__cormorant">Wine Identifier</h1>
-        <p className="p__opensans">Powered By AI-API</p>{" "}
         <div className="app__newsletter-input flex__center">
           <input
             type="file"
@@ -61,9 +64,9 @@ const WineRecognition = () => {
           />
           <button
             type="button"
-            className="custom__button"
             onClick={recognizeWine}
             disabled={!selectedFile}
+            style={{ height: "100%" }}
           >
             Recognize Wine
           </button>
@@ -71,8 +74,43 @@ const WineRecognition = () => {
       </div>
 
       <div>
-        {" "}
-        {Array.isArray(results) && results.length > 0 ? (
+        {loading ? ( // If loading, show loading spinner
+          <div className="app__video">
+            <div style={{ textAlign: "center", backgroundColor: "#0C0C0C" }}>
+              {" "}
+              <p className="p__cormorant">Searching For Wine</p>
+            </div>
+            <video
+              ref={vidRef}
+              src={wine}
+              type="video/mp4"
+              loop
+              controls={false}
+              autoPlay={true}
+              muted
+            />
+            {/* <div className="app__video-overlay flex__center">
+            <div
+              className="app__video-overlay_circle flex__center"
+              onClick={() => {
+                setPlayVideo(!playVideo);
+                if (playVideo) {
+                  vidRef.current.pause();
+                } else {
+                  vidRef.current.play();
+                }
+              }}
+            >
+              {playVideo ? (
+                <BsPauseFill color="#fff" fontSize={30} />
+              ) : (
+                <BsFillPlayFill color="#fff" fontSize={30} />
+              )}
+            </div> 
+            </div> */}
+          </div>
+        ) : // If not loading, show results or "No results found"
+        Array.isArray(results) && results.length > 0 ? (
           results.map((result, index) => (
             <div key={index}>
               {previewImage && (

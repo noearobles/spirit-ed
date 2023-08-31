@@ -17,6 +17,7 @@ const Intro = () => {
         type="video/mp4"
         loop
         controls={false}
+        autoPlay={true}
         muted
       />
       <div className="app__video-overlay flex__center">

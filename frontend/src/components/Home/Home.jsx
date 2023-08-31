@@ -1,5 +1,5 @@
 import AboutUs from "./AboutUs/AboutUs";
-import Quote from "./Chef/Quote";
+import Quote from "./Quote/Quote";
 
 import Header from "./Header/Header";
 import Intro from "./Intro/Intro";
@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <AboutUs />
       <SpecialMenu />
+      <AboutUs />
       <Quote />
       <Intro />
     </>

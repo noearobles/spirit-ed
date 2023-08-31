@@ -28,7 +28,7 @@ const AboutUs = () => (
           professional in the vibrant food and beverage industry, this platform
           is designed to take you on an enlightening journey through the rich
           tapestry of global libations. Discover the fascinating stories behind
-          legendary beers, wines, cocktails, sake, and the countless ingredients
+          legendary cocktails, liqueurs, wines, and the countless ingredients
           that combine to create unique and tantalizing concoctions.
         </p>
         <Link to={"/history"}>

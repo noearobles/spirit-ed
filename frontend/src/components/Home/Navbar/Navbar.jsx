@@ -30,16 +30,17 @@ const Navbar = () => {
           <Link to={"contact"}>Contact</Link>
         </li>
       </ul>
+      {/* 
       <div className="app__navbar-login">
         <Link to={"login"} className="p__opensans">
           Log In | Register
         </Link>
 
-        <div />
         {/* <Link href="/" className="p__opensans">
           Sign Up
         </Link> */}
-      </div>
+
+      <div />
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu
           color="#fff"
@@ -79,11 +80,11 @@ const Navbar = () => {
                   Contact
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to={"login"} onClick={() => setToggleMenu(false)}>
                   Log In | Register
                 </Link>
-              </li>{" "}
+              </li>{" "} */}
               {/* <li>
                 <Link href="/" onClick={() => setToggleMenu(false)}>
                   Sign Up

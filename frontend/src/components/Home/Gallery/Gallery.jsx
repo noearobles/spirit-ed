@@ -30,16 +30,6 @@ const Gallery = () => {
   };
   const galleryItems = [
     {
-      image: images.beer,
-      name: "Beer From a Molange Of Breweries",
-      path: "/beer",
-    },
-    {
-      image: images.rosePour,
-      name: "Wine Knowledge & AI Powered Wine Identifier",
-      path: "/wine",
-    },
-    {
       image: images.gallery03,
       name: "Cocktail Recipe Database",
       path: "/cocktails",
@@ -50,9 +40,9 @@ const Gallery = () => {
       path: "/ingredients",
     },
     {
-      image: images.sake,
-      name: "Sake History and Knowledge",
-      path: "/sake",
+      image: images.rosePour,
+      name: "Wine Knowledge & AI Powered Wine Identifier",
+      path: "/wine",
     },
   ];
   return (

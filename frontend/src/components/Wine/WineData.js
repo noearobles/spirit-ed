@@ -1,7 +1,4 @@
 export const wineGuideData = {
-    title: "The World of Wine: A Comprehensive Guide",
-    introduction:
-        "Wine is an ancient beverage with a rich history and a complex array of flavors, aromas, and textures...",
     sections: [
         {
             title: "Understanding Wine",

@@ -7,7 +7,7 @@ export default function Card(props) {
   const { data, isLoading, isError } = props;
 
   return (
-    <div className="app__menuitem">
+    <div id="ckCard" className="app__menuitem">
       {isLoading ? (
         <div className="loader">
           {" "}
@@ -35,7 +35,7 @@ export default function Card(props) {
 
             <div className="app__menuitem-price-cocktail">
               <p className="p__cormorant">
-                <Link to={`/cocktails/${item.idDrink}`} className="view-btn">
+                <Link to={`/cocktails/${item.strDrink}`} className="view-btn">
                   View {`${item.strDrink}`} Recipe
                 </Link>
               </p>

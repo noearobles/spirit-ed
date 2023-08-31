@@ -1,36 +1,49 @@
 .app__newsletter {
     padding: 2rem 4rem;
-    border: 1px solid var(--color-golden);
-    background: var(--color-black);
+    background: url('../../../assets/bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
     height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
 }
 
 .app__newsletter-heading {
     text-align: center;
 }
 
-.app__newsletter-input form {
+.app__newsletter-input {
     display: flex;
-    flex-direction: row;
-    margin-top: 3rem;
+    grid-gap: 5px;
 }
 
-.app__newsletter-input input {
-    width: 620px;
+.app__newsletter-input input,
+.app__newsletter-input textarea,
+.app__newsletter-input button {
+    padding: 0.75rem 1rem;
     border: 1px solid var(--color-golden);
     border-radius: 5px;
     font-size: 1.5rem;
     font-family: var(--font-base);
     color: var(--color-white);
-
-    margin-right: 2rem;
-    padding: 0.75rem 1rem;
     background: var(--color-black);
+}
+
+.app__newsletter-input button:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+
+
+.contact>form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
 }
 
 
@@ -93,6 +106,11 @@ span {
     .app__newsletter-input {
         flex-direction: column;
         width: 100%;
+    }
+
+    .contact {
+
+        width: 80%;
     }
 
     .app__newsletter-input button {

@@ -13,7 +13,10 @@ export default function IngredientDetails() {
   );
   return (
     <>
-      <div className="app__menuitem card">
+      <div
+        className="app__menuitem card"
+        style={{ height: "unset", paddingTop1: "1em" }}
+      >
         {isLoading ? (
           <div className="loader">
             {" "}
@@ -32,6 +35,7 @@ export default function IngredientDetails() {
               <>
                 <div className="app__menuitem-name-cK">
                   <CustomImage
+                    wd="50%"
                     imgSrc={`https://www.thecocktaildb.com/images/ingredients/${item.strIngredient}.png`}
                   />
                   <p className="p__cormorant" style={{ color: "#DCCA87" }}>
@@ -44,10 +48,7 @@ export default function IngredientDetails() {
                   className="instructions-container-cocktail"
                   style={{ width: "100%" }}
                 >
-                  <div
-                    className="p__opensans instructions"
-                    style={{ color: "#AAAAAA" }}
-                  >
+                  <div className="p__opensans" style={{ color: "#AAAAAA" }}>
                     {item.strDescription === null ? (
                       <>
                         <p className="p__cormorant">No Description Availible</p>

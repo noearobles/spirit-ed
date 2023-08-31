@@ -25,7 +25,7 @@ const SpecialMenu = () => (
       <div className="app__specialMenu-menu">
         <div className="app__specialMenu-menu_wine  flex__center">
           <p className="app__specialMenu-menu_heading">
-            Beer, Wine, Cocktails, Spirits, & Sake
+            Cocktails, Spirits & Liqueurs, Wine
           </p>
         </div>
         <Gallery />
