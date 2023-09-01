@@ -5,6 +5,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 2fr));
     grid-gap: 1.5em;
+    background: url('../../assets/bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 
