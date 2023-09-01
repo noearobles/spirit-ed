@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 2fr));
     grid-gap: 1.5em;
+    padding-bottom: 50px;
 }
 
 
