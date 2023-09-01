@@ -10,7 +10,6 @@ export default function Card(props) {
     <div className="app__menuitem">
       {isLoading ? (
         <div className="loader">
-          {" "}
           <RingLoader
             color={"#DCCA87"}
             loading={isLoading}
@@ -20,7 +19,10 @@ export default function Card(props) {
             data-testid="loader"
           />
         </div>
-      ) : data ? (
+      ) : isError ? (
+        <h1>Error: {`${isError.message}`}</h1>
+      ) : (
+        data &&
         data.drinks.map((item) => (
           <div key={item.idDrink} className="app__menuitem-head">
             <CustomImage imgSrc={item.strDrinkThumb} wd="80%" />
@@ -32,7 +34,6 @@ export default function Card(props) {
                 <div className="app__menuitem-dash" />
               </div>
             </div>
-
             <div className="app__menuitem-price-cocktail">
               <p className="p__cormorant">
                 <Link to={`/cocktails/${item.strDrink}`} className="view-btn">
@@ -59,8 +60,6 @@ export default function Card(props) {
             </div>
           </div>
         ))
-      ) : (
-        <h1>Error: {`${isError.message}`}</h1>
       )}
     </div>
   );

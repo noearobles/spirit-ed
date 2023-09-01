@@ -21,7 +21,10 @@ export default function IngCard(props) {
               data-testid="loader"
             />
           </div>
-        ) : data ? (
+        ) : isError ? (
+          <h1>Error: {`${isError.message}`}</h1>
+        ) : (
+          data &&
           data.drinks.map((item) => (
             <div key={item.idIngredient} className="app__menuitem-head">
               <CustomImage
@@ -49,8 +52,6 @@ export default function IngCard(props) {
               </div>
             </div>
           ))
-        ) : (
-          <h1>Error: {`${isError.message}`}</h1>
         )}
       </div>
     </>
