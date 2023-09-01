@@ -5,11 +5,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 2fr));
     grid-gap: 1.5em;
-    padding-bottom: 50px;
 }
 
 
 .card {
+    background: url('../../assets/bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
     width: 100%;
     padding-top: 50px;
     display: flex;
@@ -60,11 +64,7 @@
     flex-direction: column;
     border-radius: 10px;
     padding: 0.5em 1em;
-    background: url('./assets/bg.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: fixed;
+
 }
 
 .app__menuitem-name-cK p {
