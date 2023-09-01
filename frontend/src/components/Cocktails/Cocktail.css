@@ -15,11 +15,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('../../assets/bg.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: fixed;
 }
 
 .app__menuitem-head {
@@ -114,4 +109,28 @@
 
 .instructions ul {
     list-style: none;
+}
+
+@media screen and (min-width: 2000px) {}
+
+@media screen and (max-width: 1150px) {}
+
+@media screen and (max-width: 900px) {
+    .app__menuitem {
+
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    }
+
+    .app__menuitem-sub-cocktail {
+
+        padding: 0;
+    }
+
+
+    .app__menuitem-price-cocktail {
+
+        padding: 0;
+    }
+
+
 }

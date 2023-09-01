@@ -55,7 +55,10 @@ const WineRecognition = () => {
       style={{ flexDirection: "column" }}
     >
       <div className="app__newsletter-heading">
-        <h1 className="headtext__cormorant">Wine Identifier</h1>
+        <h1 className="headtext__cormorant">Wine Recognition (api4ai)</h1>
+        <p className="p__cormorant">
+          Upload or take a picture of your wine label
+        </p>
         <div className="app__newsletter-input flex__center">
           <input
             type="file"

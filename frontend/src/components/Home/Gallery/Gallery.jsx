@@ -41,7 +41,7 @@ const Gallery = () => {
     },
     {
       image: images.rosePour,
-      name: "Wine Knowledge & AI Powered Wine Identifier",
+      name: "Wine Knowledge & Wine Identifier",
       path: "/wine",
     },
   ];

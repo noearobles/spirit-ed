@@ -33,7 +33,7 @@ function App() {
   const Layout = () => {
     return (
       <div className="App">
-        {loading ? (
+        {/* {loading ? (
           <div className="loader">
             {" "}
             <RingLoader
@@ -46,13 +46,13 @@ function App() {
             />
           </div>
         ) : (
-          <>
-            <Navbar />
-            <ScrollToTop />
-            <Outlet />
-            <Footer />
-          </>
-        )}
+          <> */}
+        <Navbar />
+        <ScrollToTop />
+        <Outlet />
+        <Footer />
+        {/* </>
+        )} */}
       </div>
     );
   };
