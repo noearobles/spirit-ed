@@ -27,6 +27,11 @@
     align-items: center;
 }
 
+.view-ing,
+.ing-btn {
+    color: var(--color-golden);
+}
+
 .app__menuitem-head {
     /* display: flex;
     justify-content: space-between;

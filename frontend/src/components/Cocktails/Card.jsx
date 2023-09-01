@@ -28,15 +28,17 @@ export default function Card(props) {
             <CustomImage imgSrc={item.strDrinkThumb} wd="80%" />
             <div className="app__menuitem-name-cK">
               <div>
-                <p className="p__cormorant" style={{ color: "#DCCA87" }}>
-                  {item.strDrink}
-                </p>
+                <p className="p__cormorant">{item.strDrink}</p>
                 <div className="app__menuitem-dash" />
               </div>
             </div>
             <div className="app__menuitem-price-cocktail">
               <p className="p__cormorant">
-                <Link to={`/cocktails/${item.strDrink}`} className="view-btn">
+                <Link
+                  to={`/cocktails/${item.strDrink}`}
+                  className="view-btn"
+                  style={{ color: "#DCCA87" }}
+                >
                   View {`${item.strDrink}`} Recipe
                 </Link>
               </p>

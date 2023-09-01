@@ -57,7 +57,6 @@ export default function CocktailInstructions(props) {
         <p className="p__cormorant" style={{ color: "#DCCA87" }}>
           {item.strDrink}
         </p>
-        <span className="app__menuitem-dash" />
       </div>
 
       <div className="instructions-container-cocktail">
@@ -121,6 +120,7 @@ export default function CocktailInstructions(props) {
           </div>
         </div>
         <p className="p__cormorant">How to Make: {item.strInstructions}</p>
+        <span className="app__menuitem-dash" />
       </div>
     </div>
   );
