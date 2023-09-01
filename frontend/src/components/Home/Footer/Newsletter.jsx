@@ -25,8 +25,8 @@ export default function Newsletter() {
   }
 
   return (
-    <div className="app__newsletter" style={{ paddingTop: "50px" }}>
-      <div className="app__newsletter-heading">
+    <div className="app__newsletter">
+      <div className="app__newsletter-heading" style={{ paddingTop: "50px" }}>
         <SubHeading title="Contact" />
         <h1 className="headtext__cormorant">Get In Touch</h1>
         <p className="p__opensans"></p>
